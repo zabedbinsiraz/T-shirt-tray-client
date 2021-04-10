@@ -1,0 +1,35 @@
+.manage-section{
+    height: 100vh;
+    width: 30%;
+    background-color: darkolivegreen;
+    
+    padding: 10px;
+    margin:10px;
+    border: 1px solid darkslategrey;
+    border-radius: 10px;
+}
+
+@media  screen and (max-width:668px) {
+
+    .manage-section{
+    height: 100%;
+    width: 100%;
+  
+}
+
+.admin-container{
+    background-color: darkolivegreen;
+}
+}
+.manage-section a{
+    text-decoration:none;
+    color: white;
+    font-size: 0.9 rem;
+    display: block;
+}
+
+.admin-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}

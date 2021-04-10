@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import React, { createContext, useState } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Admin from './components/Admin/Admin';
+import Home from "./components/Home/Home";
+import Orders from './components/Orders/Orders';
+import Login from './components/Login/Login';
+import Deals from './components/Deals/Deals'
+import Header from './components/Header/Header';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
-function App() {
+// https://github.com/Porgramming-Hero-web-course/full-stack-server-zabedbinsiraz
+
+export const UserContext = createContext();
+const App = () => { 
+  const [loggedInUser,setLoggedInUser]= useState({});
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   
+     <UserContext.Provider value={[loggedInUser,setLoggedInUser]} >
+    <h2>{loggedInUser.name}</h2>
+      <Router>
+    
+      <Header></Header>
+     
+      <Switch>
+
+      <Route path="/home">
+       <Home></Home>
+        </Route>
+        <PrivateRoute path="/admin">
+          <Admin></Admin>
+        </PrivateRoute>
+        <PrivateRoute path="/orders">
+          <Orders></Orders>
+        </PrivateRoute>
+        <Route path="/login">
+          <Login></Login>
+        </Route>
+        <Route path="/deals">
+          <Deals></Deals>
+        </Route>
+        <Route path="/">
+          <Home></Home>
+        </Route>
+  
+      </Switch>
+    
+  </Router>
+   </UserContext.Provider>
+   
   );
-}
+};
 
 export default App;

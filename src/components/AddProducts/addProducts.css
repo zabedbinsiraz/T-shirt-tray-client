@@ -1,0 +1,53 @@
+.form-container{
+    margin: 10px;
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+.form-control{
+    margin: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+    background-color: cadetblue;
+    border-radius: 10px;
+    width: 90%;
+    
+
+}
+@media screen and (max-width:668px){
+    .form-control{
+        margin: 10px;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 5px;
+        background-color: cadetblue;
+        border-radius: 10px;
+        width: 80%;
+    
+    }
+  
+.save-btn{
+  margin-left: 50px;
+}
+
+}
+
+.input{
+    padding: 5px;
+    margin:5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.save-btn{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color:cadetblue;
+    margin-left: 300px;
+    font-weight: 600;
+    cursor: pointer;
+}
