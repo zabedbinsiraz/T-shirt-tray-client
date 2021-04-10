@@ -30,7 +30,7 @@ const classes = makeStyles((theme) => ({
 
 
     useEffect(() => {
-        fetch('http://localhost:5555/tShirts')
+        fetch('https://fast-beach-99961.herokuapp.com/tShirts')
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
@@ -45,7 +45,7 @@ const classes = makeStyles((theme) => ({
 
         setBuyNow(true);
 
-        fetch(`http://localhost:5555/tShirt/${id}`)
+        fetch(`https://fast-beach-99961.herokuapp.com/tShirt/${id}`)
             .then(res => res.json())
             .then(data => {
               setShirt(data)

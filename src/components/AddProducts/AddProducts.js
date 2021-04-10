@@ -16,7 +16,7 @@ const AddProducts = () => {
             desc:data.desc
         }
         console.log(productData)
-        const url =`http://localhost:5555/addProduct`;
+        const url =`https://fast-beach-99961.herokuapp.com/addProduct`;
         fetch(url,{
             method:'POST',
             headers:{

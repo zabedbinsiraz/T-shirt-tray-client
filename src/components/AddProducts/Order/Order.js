@@ -28,7 +28,7 @@ const Order = (props) => {
       buyerEmail: orderDetails.email,
       date: new Date(),
     }
-    fetch('http://localhost:5555/addOrder', {
+    fetch('https://fast-beach-99961.herokuapp.com/addOrder', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

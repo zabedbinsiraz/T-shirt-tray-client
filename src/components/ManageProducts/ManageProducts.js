@@ -17,7 +17,7 @@ const ManageProducts = () => {
     const [editProduct, setEditProduct] = useState({});
 
     const loadProducts = () => {
-        fetch('http://localhost:5555/tShirts')
+        fetch('https://fast-beach-99961.herokuapp.com/tShirts')
             .then(res => res.json())
             .then(data => {
                 setShirts(data)
@@ -26,7 +26,7 @@ const ManageProducts = () => {
     loadProducts();
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5555/deleteProduct/${id}`, {
+        fetch(`https://fast-beach-99961.herokuapp.com/deleteProduct/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
