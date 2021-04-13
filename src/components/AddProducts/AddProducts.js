@@ -85,6 +85,14 @@ const AddProducts = () => {
               </div>
              </form> 
            }
+
+           {/* {
+               addedProduct &&   <Redirect
+               to={{
+                   pathname: "/home",
+               }}
+           />
+           } */}
         </div>
     );
 };

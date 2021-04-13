@@ -1,13 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { set } from 'react-hook-form';
-import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
-import PrivateRoute from '../../PrivateRoute/PrivateRoute';
-import Order from '../AddProducts/Order/Order';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
+import Order from '../Order/Order';
 import Shirts from '../Shirts/Shirts';
 import './Home.css';
-import { makeStyles } from '@material-ui/core/styles';
-import CircularProgress from '@material-ui/core/CircularProgress';
 
 
 const Home = () => {
@@ -16,17 +12,6 @@ const Home = () => {
     const [buyNow, setBuyNow] = useState(false);
     const [shirt,setShirt] = useState({});
     const [loading,setLoading] = useState(true);
-    
-
-const classes = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    '& > * + *': {
-      marginLeft: theme.spacing(2),
-    },
-  },
-}));
-    
 
 
     useEffect(() => {
@@ -55,11 +40,9 @@ const classes = makeStyles((theme) => ({
 
     return (
         <div>
+            
             {
-                loading? <div className={classes.root}>
-                <CircularProgress />
-                <CircularProgress color="secondary" />
-              </div>
+                loading? <p style={{color:'yellow'}}>Loading....</p>
                 :  <div>
                 {  buyNow ? <PrivateRoute>
                      <Order shirt={shirt}></Order>

@@ -11,7 +11,7 @@ import Orders from './components/Orders/Orders';
 import Login from './components/Login/Login';
 import Deals from './components/Deals/Deals'
 import Header from './components/Header/Header';
-import PrivateRoute from './PrivateRoute/PrivateRoute';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 

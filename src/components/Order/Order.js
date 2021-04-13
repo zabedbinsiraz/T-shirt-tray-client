@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { UserContext } from '../../../App';
+import { UserContext } from '../../App';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -50,13 +50,6 @@ const Order = (props) => {
     },
   }));
 
-  function createData(name, carbs, protein) {
-    return { name, carbs, protein };
-  }
-
-  const rows = [
-    createData('Frozen yoghurt', 24, 4.0),
-  ];
 
 
 
